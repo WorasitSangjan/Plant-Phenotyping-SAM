@@ -37,11 +37,8 @@ plant-phenotyping-sam/
 ├── config.py               # Global configuration
 ├── requirements.txt        # Python dependencies
 ├── README.md               # This file
-└── docs/                   # Documentation and guides
-    ├── QUICKSTART.md
-    ├── SCALABLE_WORKFLOW.md
-    └── VISUAL_WORKFLOW.md
-```
+├── LICENSE
+└── .gitignore
 
 ---
 
