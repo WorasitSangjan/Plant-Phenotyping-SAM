@@ -2,12 +2,12 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
-![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red.svg)
 ![Agriculture](https://img.shields.io/badge/Agriculture-Precision%20Agriculture-green.svg)
-![Research](https://img.shields.io/badge/Research-WSU--Phenomics-navy.svg)
+![Research](https://img.shields.io/badge/Research-USDA--ARS-navy.svg)
 
-> **Automated extraction of per-plant phenotypic traits from top-down images using SAM (Segment Anything Model) with pot-anchored prompts. Designed for high-throughput plant phenotyping in controlled environments where leaf overlap is a challenge.
+> **Automated extraction of per-plant phenotypic traits from top-down images using SAM (Segment Anything Model) with pot-anchored prompts. Designed for high-throughput plant phenotyping in controlled environments where leaf overlap is a challenge.**
 
 ---
 
