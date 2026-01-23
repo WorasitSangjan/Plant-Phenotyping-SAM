@@ -14,7 +14,7 @@
 ## Repository Structure
 
 ```
-plant-phenotyping-sam/
+Plant-Phenotyping-SAM/
 │
 ├── 1_annotatation/              # Step 1: Pot center annotation
 │   ├── README.md
@@ -22,24 +22,24 @@ plant-phenotyping-sam/
 │   ├── copy_pot_centers_to_all.py
 │   └── auto_detect_pots.py
 │
-├── 2_segmentation/               # Step 2: SAM-based segmentation
+├── 2_segmentation/              # Step 2: SAM-based segmentation
 │   ├── README.md
 │   └── segment_plants.py
 │
-├── 3_extractation/               # Step 3: Trait extraction
+├── 3_extractation/              # Step 3: Trait extraction
 │   ├── README.md
 │   └── extract_traits.py
 │
-├── 4_visualization/             # Step 4: Visualization
+├── 4_visualization/            # Step 4: Visualization
 │   ├── README.md
 │   └── visualize_results.py
 │
-├── config.py               # Global configuration
-├── requirements.txt        # Python dependencies
-├── README.md               # This file
+├── config.py                   # Global configuration
+├── requirements.txt            # Python dependencies
+├── README.md                   # This file
 ├── LICENSE
 └── .gitignore
-
+```
 ---
 
 ## Key Features
