@@ -4,7 +4,7 @@ This folder contains tools for annotating pot centers, which serve as biological
 
 ---
 
-## 📋 Overview
+## Overview
 
 **Purpose:** Mark the center of each pot to establish plant identities
 
@@ -17,7 +17,7 @@ This folder contains tools for annotating pot centers, which serve as biological
 
 ---
 
-## 🎯 Why This Step is Critical
+## Why This Step is Critical
 
 Pot centers serve as:
 - **Biological identity anchors** - Each pot = one plant
@@ -28,7 +28,7 @@ Without accurate pot centers, the entire pipeline fails.
 
 ---
 
-## 📁 Files in This Folder
+## Files in This Folder
 
 ### Core Scripts
 
@@ -38,7 +38,7 @@ Without accurate pot centers, the entire pipeline fails.
 - Save/load annotations
 
 **`copy_pot_centers_to_all.py`** - Copy pot centers across images
-- Use when imaging setup is fixed
+- Use when the imaging setup is fixed
 - Saves 40+ hours for large datasets
 
 **`auto_detect_pots.py`** - Automatic pot detection
@@ -48,7 +48,7 @@ Without accurate pot centers, the entire pipeline fails.
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Method 1: Manual Annotation (Recommended for First Time)
 
@@ -66,9 +66,9 @@ python annotate_pots.py
 - **`q`**: Save and quit
 
 **Tips:**
-- Be consistent (always mark center of soil surface)
+- Be consistent (always mark the center of the soil surface)
 - Start with a clear image (mid-growth stage)
-- For very small seedlings, place slightly toward visible stem
+- For very small seedlings, place slightly toward the visible stem
 - Mark pots in systematic order (left to right, top to bottom)
 
 ---
@@ -81,9 +81,9 @@ python copy_pot_centers_to_all.py --reference rgb_061325.jpg
 ```
 
 **When to use:**
-- ✅ Camera and tray positions are fixed
-- ✅ All images from same experimental setup
-- ✅ Processing 50+ images
+- Camera and tray positions are fixed
+- All images from the same experimental setup
+- Processing 50+ images
 
 **Arguments:**
 - `--reference` or `-r`: Name of reference image (required)
@@ -112,7 +112,7 @@ python auto_detect_pots.py --image rgb_061325.jpg --method grid --rows 4 --cols 
 
 **Methods:**
 - `hough`: Detects circular pots using Hough Circle Transform
-- `grid`: Generates regular grid pattern
+- `grid`: Generates a regular grid pattern
 
 **Arguments:**
 - `--image` or `-i`: Reference image name (required)
@@ -125,7 +125,7 @@ python auto_detect_pots.py --image rgb_061325.jpg --method grid --rows 4 --cols 
 
 ---
 
-## 📤 Output
+## Output
 
 ### pot_centers.json
 ```json
@@ -147,13 +147,13 @@ python auto_detect_pots.py --image rgb_061325.jpg --method grid --rows 4 --cols 
 **Format:**
 - Dictionary mapping image names to pot centers
 - Each pot center is `[x, y]` in pixel coordinates
-- Origin is top-left corner
+- Origin is the top-left corner
 
 **Location:** `/mnt/user-data/outputs/pot_centers.json`
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 Edit `../config.py` to customize:
 
@@ -173,7 +173,7 @@ OUTPUT_DIR = Path("/mnt/user-data/outputs")
 
 ---
 
-## ✅ Verification
+## Verification
 
 ### Visual Check
 ```bash
@@ -206,17 +206,17 @@ reference_count = len(pot_centers[first_image])
 
 for image_name, centers in pot_centers.items():
     if len(centers) != reference_count:
-        print(f"⚠️ {image_name}: {len(centers)} pots (expected {reference_count})")
+        print(f"{image_name}: {len(centers)} pots (expected {reference_count})")
 
 print(f"✓ Verified {len(pot_centers)} images")
 ```
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: "No images found"
-**Cause:** Images not in expected directory
+**Cause:** Images not in the expected directory
 
 **Solution:**
 ```bash
@@ -270,7 +270,7 @@ python annotate_pots.py  # Right-click to remove
 
 ---
 
-## 📊 Workflow Examples
+## Workflow Examples
 
 ### Example 1: Small Dataset (12 images)
 ```bash
@@ -329,38 +329,27 @@ python copy_pot_centers_to_all.py --reference rgb_201.jpg
 ## 💡 Best Practices
 
 ### Annotation Quality
-- ✅ Use a clear, mid-growth stage image as reference
-- ✅ Zoom in if needed for precision
-- ✅ Mark pots in systematic order
-- ✅ Double-check before moving to next image
-- ✅ Save frequently (`s` key)
+- Use a clear, mid-growth stage image as a reference
+- Zoom in if needed for precision
+- Mark pots in systematic order
+- Double-check before moving to the next image
+- Save frequently (`s` key)
 
 ### Verification
-- ✅ Always verify random samples after copying
-- ✅ Check early, middle, and late dates
-- ✅ Compare pot counts across images
-- ✅ Visual inspection of pot_detection_*.jpg files
+- Always verify random samples after copying
+- Check early, middle, and late dates
+- Compare pot counts across images
+- Visual inspection of pot_detection_*.jpg files
 
 ### Scalability
-- ✅ For 50+ images, use copy_pot_centers_to_all.py
-- ✅ For 100+ images, try auto-detection first
-- ✅ For multiple setups, annotate one per setup
-- ✅ Save pot_centers.json to version control
+- For 50+ images, use copy_pot_centers_to_all.py
+- For 100+ images, try auto-detection first
+- For multiple setups, annotate one per setup
+- Save pot_centers.json to version control
 
 ---
 
-## 📈 Time Estimates
-
-| Dataset Size | Manual (All) | Copy Method | Auto + Verify |
-|-------------|-------------|-------------|---------------|
-| 12 images   | 60 min      | 5 min       | 10 min        |
-| 50 images   | 4.2 hours   | 5 min       | 12 min        |
-| 500 images  | 42 hours    | 5 min       | 20 min        |
-| 1000 images | 83 hours    | 5 min       | 30 min        |
-
----
-
-## ⏭️ Next Step
+## Next Step
 
 Once pot centers are annotated and verified:
 
@@ -370,11 +359,3 @@ python segment_plants.py
 ```
 
 See [../2_segment/README.md](../2_segment/README.md) for segmentation instructions.
-
----
-
-## 🔗 Related Documentation
-
-- [Main README](../README.md) - Pipeline overview
-- [Quick Start Guide](../docs/QUICKSTART.md) - Get started quickly
-- [Scalable Workflow](../docs/SCALABLE_WORKFLOW.md) - Processing large datasets
