@@ -11,6 +11,10 @@ Instructions:
     - Press 'p': Previous image
     - Press 's': Save and continue
     - Press 'q': Save and quit
+
+Author: Worasit Sangjan
+Date Created: 29 January 2026
+Version: 1.2   
 """
 
 import cv2
