@@ -242,8 +242,7 @@ Areas for contribution:
 ## Contact
 
 - **Issues:** [GitHub Issues](https://github.com/WorasitSangjan/Plant-Phenotyping-SAM/issues)
-- **Email:** worasitsangjan.ws@gmail.com
-
+- **Website:** [worasitsangjan.github.io](https://worasitsangjan.github.io/)
 ---
 
 ## License
